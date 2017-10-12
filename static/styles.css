@@ -1,0 +1,47 @@
+.top-heading {
+    text-align: center;
+}
+
+.navbar-brand {
+    font-style: oblique;
+    font-size: 40px;
+}
+
+.categorielist {
+    background-color: black;
+}
+
+.latestitems {
+    background-color: lightgray;
+    height: 553px;
+}
+
+.panel {
+    background-color: purple;
+    text-align: center;
+}
+
+.description {
+    overflow: scroll;
+    font-size: 17px;
+}
+
+.area {
+    overflow: scroll;
+}
+
+.form-control {
+    overflow: scroll;
+}
+
+.flash {
+    background-color: red;
+}
+
+.footer {
+    height: 40px;
+    background-color: #28364f;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    color: #FFFFFF;
+}
