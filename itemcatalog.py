@@ -1,3 +1,8 @@
+import os
+APP_ROOT = os.path.dirname(os.path.abspath(__file__)) 
+def getClientSecrets():
+return os.path.join(APP_ROOT, "client_secrets.json")
+
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask import Flask, jsonify
 from sqlalchemy import create_engine, asc, desc
@@ -19,7 +24,7 @@ import requests
 app = Flask(__name__)
 
 CLIENT_ID = json.loads(
-     open('client_secrets.json', 'r').read())['web']['client_id']
+     open(getClientSecrets(), 'r').read())['web']['client_id']
 APPLICATION_NAME = "Item Catalog Application"
 
 engine = create_engine("postgresql://catalog:topsecret@localhost/catalogdb")
