@@ -1,29 +1,26 @@
-﻿Item Catalog Application
+# Item Catalog Application
 This project is for creating an application that displays categories with list of items and their JSON endpoints. This App utilizes the oauth functionality from google to enable the users to sign in or sign up for performing CRUD operations.
 
 
-Getting Started  
-* Log in to your GitHub account and click ItemCatalog to go to the repository and fork it.
+## Getting Started  
+* Log in to your GitHub account and to go to the repository swathiyemp/ItemCatalog and fork it.
 * Download Git from the link specified in prerequisites and install.
 * Click on Git Bash and run the following command-- 
-          Git clone http://github.com/<username>/https://github.com/swathiyemp/
-            ItemCatalog
+  Git clone http://github.com/<username>/https://github.com/swathiyemp/ItemCatalog
 * Replace <username> with your Github User Name in the command above. 
    
-     Prerequisites
+     
+###### Prerequisites
+1. Vagrant--https://www.vagrantup.com/downloads.html
+1. Virtual Box--https://www.virtualbox.org/wiki/Downloads
+1. Git--https://git-scm.com/downloads
+1. Google Client Id and Client Secret--https://console.developers.google.com
 
-
-1.  Vagrant--https://www.vagrantup.com/downloads.html
-2.  Virtual Box--https://www.virtualbox.org/wiki/Downloads
-3.  Git--https://git-scm.com/downloads
-4.  Google Client Id and Client Secret--https://console.developers.google.com
-
-
-     Installing
+###### Installing
 1. Install the Git with default options.
-2. Install Virtual box with default specifications and make sure you don’t  launch it.
-3. To install Vagrant, first find the appropriate package for your system and download it.  Run the installer for your system. The installer will automatically add vagrant to your system path so that it is available in Git. 
-4. For creating client id and client secrets goto https://console.developers.google.com and then follow below steps.
+1. Install Virtual box with default specifications and make sure you don’t  launch it.
+1. To install Vagrant, first find the appropriate package for your system and download it.  Run the installer for your system. The installer will automatically add vagrant to your system path so that it is available in Git. 
+1. For creating client id and client secrets goto https://console.developers.google.com and then follow below steps.
 * Click credentials from the left menu
 * Then click create credentials.
 * Choose OAuth client id
@@ -45,7 +42,7 @@ Getting Started
 * save all.
 
 
-Running the Application  
+## Running the Application  
 * Go to ItemCatalog directory and right click and choose Git Bash Here.
 * The Git terminal opens up.
 * Type vagrant up and wait until it finishes loading.
@@ -57,7 +54,7 @@ Running the Application
 * The application will open, click log in and enter your gmail credentials.
 
 
-Built With
+## Built With
 * Python
 * Flask
 * SQL Alchemy

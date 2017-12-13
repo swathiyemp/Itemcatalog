@@ -68,7 +68,6 @@ class Description(Base):
             'content': self.content,
 
         }
-engine = create_engine('sqlite:///itemcatalog.db')
-
+engine = create_engine("postgresql://catalog:topsecret@localhost/catalogdb")
 
 Base.metadata.create_all(engine)

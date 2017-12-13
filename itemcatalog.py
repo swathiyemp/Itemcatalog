@@ -22,7 +22,7 @@ CLIENT_ID = json.loads(
      open('client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Item Catalog Application"
 
-engine = create_engine('sqlite:///itemcatalog.db')
+engine = create_engine("postgresql://catalog:topsecret@localhost/catalogdb")
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
