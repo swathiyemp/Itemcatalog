@@ -62,11 +62,7 @@ session.commit()
 description3 = Description(content="In association football, kit"
                                    "also referred to as strip or soccer"
                                    "uniform is the standard equipment and"
-                                   "attire worn by players. The sport's Laws"
-                                   "of the Game specify the minimum kit which"
-                                   "a player must use, and also prohibit the"
-                                   "use of anything that is dangerous to"
-                                   "either the player or another participant.",
+                                   "attire worn by players.",
                            items=items3, user=user1)
 
 
@@ -87,10 +83,7 @@ session.commit()
 
 description1 = Description(content="A Basket Ball hoop is a raised vertical"
                                    "board with a basket attached.A basketball"
-                                   "hoop is mounted to a basketball backboard"
-                                   "via a flexible connection between the"
-                                   "backboard and the connection sroble the"
-                                   "hoop.",
+                                   "hoop is mounted to a basketball backboard",
                            items=items1, user=user1)
 
 session.add(description1)
@@ -104,9 +97,7 @@ session.commit()
 description2 = Description(content="Basketball shoes are all created with the"
                                    "same basic type of construction that"
                                    "includes an upper, a midsole, and an"
-                                   "outsole. Each of these key components is"
-                                   "designed to provide basketball players"
-                                   "with the best playing experience.",
+                                   "outsole.",
                            items=items2, user=user1)
 
 
@@ -126,9 +117,7 @@ session.commit()
 description1 = Description(content="Baseball cleats are designed to give"
                                    "athletes the traction, support, and"
                                    "comfort they need to perform on the"
-                                   "diamond. Tons of technology is built into"
-                                   "the outsole of these cleats and there are"
-                                   "generally two options: metal or molded.",
+                                   "diamond.",
                            items=items1, user=user1)
 
 session.add(description1)
@@ -142,10 +131,7 @@ session.commit()
 description2 = Description(content="A baseball bat is a smooth wooden or metal"
                                    "club used in the sport of baseball to hit"
                                    "the ball after it is thrown by the"
-                                   "pitcher.By regulation it may be no more"
-                                   "than 2.75 inches (70 mm) in diameter at"
-                                   "the thickest part and no more than 42"
-                                   "inches (1,100 mm) long.",
+                                   "pitcher.",
                            items=items2, user=user1)
 
 session.add(description2)
@@ -163,11 +149,8 @@ session.commit()
 
 description1 = Description(content="A frisbee (also called a flying disc or"
                                    "simply a disc) is a gliding toy or"
-                                   "sporting item that is generally plastic"
-                                   "and roughly 20 to 25 centimetres (8 to 10"
-                                   "in) in diameter with a lip, used"
-                                   "recreationally and competitively for"
-                                   "throwing and catching.",
+                                   "sporting item used for throwing and"
+                                   "catching.",
                            items=items1, user=user1)
 
 session.add(description1)
