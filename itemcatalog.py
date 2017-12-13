@@ -1,7 +1,7 @@
 import os
 APP_ROOT = os.path.dirname(os.path.abspath(__file__)) 
 def getClientSecrets():
-return os.path.join(APP_ROOT, "client_secrets.json")
+ return os.path.join(APP_ROOT, "client_secrets.json")
 
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask import Flask, jsonify
