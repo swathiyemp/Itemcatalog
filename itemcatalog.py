@@ -1,5 +1,5 @@
 import os
-APP_ROOT = os.path.dirname(os.path.abspath(__file__)) 
+APP_ROOT = os.path.Itemcatalog(os.path.abspath(__file__)) 
 def getClientSecrets():
  return os.path.join(APP_ROOT, "client_secrets.json")
 
