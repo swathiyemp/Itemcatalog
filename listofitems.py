@@ -13,7 +13,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-user1 = User(name="some rand", email="somerand231@gmail.com")
+user1 = User(name="swathi yemperala", email="swatz2006@gmail.com")
 
 
 session.add(user1)
