@@ -223,9 +223,6 @@ def DescriptionsJSON(items_id):
 # Show all categories and latest added items
 
 
-# Show all categories and latest added items
-
-
 @app.route('/')
 @app.route('/category/')
 def categorielist():
