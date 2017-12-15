@@ -258,10 +258,10 @@ def newCategory():
 
 @app.route('/category/<int:category_id>/edit/', methods=['GET', 'POST'])
 def editCategory(category_id):
-    editedcategory = session.query(Category).filter_by(id=category_id).one()
-    user = getUserInfo(login_session.get('user_id')) 
     if 'username' not in login_session:
         return redirect('/login')
+    categories = session.query(Category).order_by(asc(Category.name))
+    editedcategory = session.query(Category).filter_by(id=category_id).one()
     if editedcategory.user_id != login_session['user_id']:
         flash('You are not authorized to edit.Piease create your own category'
               'to edit')
@@ -274,7 +274,8 @@ def editCategory(category_id):
         flash('Category Successfully Edited %s' % editedcategory.name)
         return redirect(url_for('categorielist', category_id=category_id))
     else:
-        return render_template('editCategory.html', category=editedcategory)
+        return render_template('editCategory.html', category_id=category_id,
+                               category=editedcategory, categories=categories)
 
 # Delete the Category
 
