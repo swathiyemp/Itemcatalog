@@ -57,7 +57,7 @@ class Description(Base):
     id = Column(Integer, primary_key=True)
     content = Column(String(250), nullable=False)
     items_id = Column(Integer, ForeignKey('items.id'))
-    items = relationship(Items, cascade="all, delete-orphan")
+    items = relationship(Items)
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User, cascade="save-update")
 
