@@ -258,7 +258,9 @@ def newCategory():
 
 @app.route('/category/<int:category_id>/edit/', methods=['GET', 'POST'])
 def editCategory(category_id):
+    categories = session.query(Category).all()
     editedcategory = session.query(Category).filter_by(id=category_id).one()
+    user = getUserInfo(login_session.get('user_id')) 
     if 'username' not in login_session:
         return redirect('/login')
     if editedcategory.user_id != login_session['user_id']:
