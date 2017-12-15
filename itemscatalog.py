@@ -20,8 +20,8 @@ class Category(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
-    user_id = Column(Integer, ForeignKey('user.id', ondelete="CASCADE"))
-    user = relationship(User)
+    user_id = Column(Integer, ForeignKey('user.id', ondelete='CASCADE'))
+    user = relationship(User, cascade='delete')
 
     @property
     def serialize(self):
@@ -38,9 +38,9 @@ class Items(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(80), nullable=False)
     category_id = Column(Integer, ForeignKey('category.id', ondelete="CASCADE"))
-    category = relationship(Category)
-    user_id = Column(Integer, ForeignKey('user.id', ondelete="CASCADE"))
-    user = relationship(User)
+    category = relationship(Category, cascade='delete')
+    user_id = Column(Integer, ForeignKey('user.id', ondelete='CASCADE'))
+    user = relationship(User, cascade='delete')
 
     @property
     def serialize(self):
@@ -57,9 +57,9 @@ class Description(Base):
     id = Column(Integer, primary_key=True)
     content = Column(String(250), nullable=False)
     items_id = Column(Integer, ForeignKey('items.id', ondelete="CASCADE"))
-    items = relationship(Items)
+    items = relationship(Items, cascade='delete')
     user_id = Column(Integer, ForeignKey('user.id', ondelete="CASCADE"))
-    user = relationship(User)
+    user = relationship(User, cascade='delete')
 
     @property
     def serialize(self):
