@@ -20,7 +20,7 @@ class Category(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
-    user_id = Column(Integer, ForeignKey('user.id', ondelete='CASCADE' onupdate='CASCADE'))
+    user_id = Column(Integer, ForeignKey('user.id', ondelete='CASCADE', onupdate='CASCADE'))
     user = relationship(User)
 
     @property
@@ -37,9 +37,9 @@ class Items(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(80), nullable=False)
-    category_id = Column(Integer, ForeignKey('category.id', ondelete='CASCADE' onupdate='CASCADE'))
+    category_id = Column(Integer, ForeignKey('category.id', ondelete='CASCADE', onupdate='CASCADE'))
     category = relationship(Category)
-    user_id = Column(Integer, ForeignKey('user.id', ondelete='CASCADE' onupdate='CASCADE'))
+    user_id = Column(Integer, ForeignKey('user.id', ondelete='CASCADE', onupdate='CASCADE'))
     user = relationship(User)
 
     @property
@@ -56,9 +56,9 @@ class Description(Base):
 
     id = Column(Integer, primary_key=True)
     content = Column(String(250), nullable=False)
-    items_id = Column(Integer, ForeignKey('items.id', ondelete='CASCADE' onupdate='CASCADE'))
+    items_id = Column(Integer, ForeignKey('items.id', ondelete='CASCADE', onupdate='CASCADE'))
     items = relationship(Items)
-    user_id = Column(Integer, ForeignKey('user.id', ondelete='CASCADE' onupdate='CASCADE'))
+    user_id = Column(Integer, ForeignKey('user.id', ondelete='CASCADE', onupdate='CASCADE'))
     user = relationship(User)
 
     @property
