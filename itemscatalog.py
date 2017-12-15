@@ -38,7 +38,7 @@ class Items(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(80), nullable=False)
     category_id = Column(Integer, ForeignKey('category.id'))
-    category = relationship(Category, cascade="all, delete-orphan")
+    category = relationship(Category, cascade="all, single_parent=True")
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User, cascade="save-update")
 
@@ -57,7 +57,7 @@ class Description(Base):
     id = Column(Integer, primary_key=True)
     content = Column(String(250), nullable=False)
     items_id = Column(Integer, ForeignKey('items.id'))
-    items = relationship(Items)
+    items = relationship(Items, cascade="all, single_parent=True")
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User, cascade="save-update")
 
