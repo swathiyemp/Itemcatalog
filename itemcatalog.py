@@ -366,7 +366,7 @@ def editItem(category_id, lists_id):
         return redirect(url_for('itemslist', category_id=category_id))
     else:
         return render_template(
-            'edititem.html', category_id=category_id, lists_id=lists_id,
+            'editItem.html', category_id=category_id, lists_id=lists_id,
             items=editedItem)
 
 # Delete an Item in the Category
