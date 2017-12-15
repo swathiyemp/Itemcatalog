@@ -228,7 +228,7 @@ def DescriptionsJSON(items_id):
 def categorielist():
     categories = session.query(Category).order_by(asc(Category.name))
     addeditems = session.query(Category).order_by(desc(Category.id)).limit(10)
-    item = session.query(Items).order_by(desc(items.id)).limit(10)
+    item = session.query(Items).order_by(desc(Items.id)).limit(10)
     if 'username' not in login_session:
         return render_template('PublicCategories.html', categories=categories,
                                addeditems=addeditems, item=item)
