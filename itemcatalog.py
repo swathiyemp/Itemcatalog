@@ -265,7 +265,6 @@ def editCategory(category_id):
     if editedcategory.user_id != login_session['user_id']:
         flash('You are not authorized to edit.Piease create your own category'
               'to edit')
-    return redirect(url_for('categorielist', category_id=category_id))
     if request.method == 'POST':
         if request.form['name']:
             editedcategory.name = request.form['name']
