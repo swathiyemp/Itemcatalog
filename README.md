@@ -1,5 +1,5 @@
 # Item Catalog Application
-This project is for creating an application that displays categories with list of items and their JSON endpoints. This App utilizes the oauth functionality from google to enable the users to sign in or sign up for performing CRUD operations.
+This project is for creating an application that displays categories with list of items and their JSON endpoints. This App utilizes the oauth functionality from google to enable the users to sign in or sign up to create their own category for performing CRUD operations.
 
 
 ## Getting Started  
